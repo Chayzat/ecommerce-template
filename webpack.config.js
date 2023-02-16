@@ -27,12 +27,17 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.pug$/,
+                loader: "pug-loader",
+                exclude: /(node_modules)/
+            },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Ecomm",
-            template: "./src/index.html"
+            title: "Meubel House",
+            template: "./src/index.pug"
         })
     ]
 }
