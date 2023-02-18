@@ -4,4 +4,5 @@ mixin header(page='Home')
             block
         else
             +navbar
-                +nav(page)
+                +navbar-brand('Content')
+                +nav(page, 'navbar-nav flex-row')

@@ -1,0 +1,11 @@
+- var navControllItems = [{'user':'fa-regular fa-user'}, {'seacrh':'fa-solid fa-magnifying-glass'}, {'heart':'fa-regular fa-heart'},{'basket':'fa-solid fa-cart-shopping'}];
+
+//- сделать навигацию
+
+mixin nav-controll(activePage='Home', items= navControllItems)
+    ul.nav-controll.flex
+        each item in items
+            li.nav-item
+                each icon, id in item
+                    a.nav-link(class=(id === value === activePage ? "active" : ''))
+                        i(class= icon)

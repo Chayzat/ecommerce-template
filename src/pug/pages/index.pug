@@ -1,32 +1,13 @@
 extends ../layout
 
-block variables
-    -
-        var accItems = [
-            {
-                headingContent: 'Item 4',
-                bodyContent: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, temporibus.'
-            },
-            {
-                headingContent: 'Item 5',
-                bodyContent: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, temporibus.'
-            },
-            {
-                headingContent: 'Item 6',
-                bodyContent: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, temporibus.'
-            }
-        ]
-    -var footItems_1 = [{'Home': 'index.html'}, {'Categories': 'categories.html'}, {'About': 'about.html'}]
-    -var footItems_2 = [{'Home': 'index.html'}, {'About': 'about.html'}, {'Categories': 'categories.html'}]
-    -var footItems_3 = [{'Categories': 'categories.html'}, {'Home': 'index.html'}, {'About': 'about.html'}]
 
 block content
+    +header
+        +nav('Home')
     main
         p Hi  index
-        a(href="about.html") about
 
 
-        +nav('Home', 'navbar-nav flex-row')
 
 
 

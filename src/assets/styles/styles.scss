@@ -1,2 +1,24 @@
 @import './colors.scss';
 @import './reset.scss';
+
+body {
+    background-color: $yellow;
+}
+
+.nav {
+    position: relative;
+    padding: 2.375rem;
+    justify-content: center;
+    .nav-menu {
+        gap: 4.688rem;
+    }
+    .nav-controll {
+        gap: 2.813rem;
+        position: absolute;
+        right: 6.25rem;
+    }
+    .nav-link:hover {
+        color: $yellow-dark;
+        transition: all .4s;
+    }
+}

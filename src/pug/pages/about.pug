@@ -1,5 +1,8 @@
-extends ../layout.pug
+extends ../layout
+
 
 block content
+    +header
+        +nav('About')
     main
-        +nav('About', 'navbar-nav flex-row')
+        p Hi  about
