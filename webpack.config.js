@@ -1,5 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const globule = require("globule");
+
+const paths = globule.find(["src/pug/pages/**/*.pug"]);
+
 
 module.exports = {
     entry: {
@@ -12,7 +16,11 @@ module.exports = {
     },
     mode: "development",
     devServer: {
-        static: "./src",
+        open: true,
+        static: {
+            directory: './src',
+            watch: true
+        },
         compress: true,
         port: 9000,
         hot: true
@@ -35,9 +43,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            title: "Meubel House",
-            template: "./src/index.pug"
+        ...paths.map((path) => {
+            return new HtmlWebpackPlugin({
+                template:`${path}`,
+                filename: `${path.split(/\/|.pug/).splice(-2, 1)}.html`,
+            });
         })
     ]
 }
