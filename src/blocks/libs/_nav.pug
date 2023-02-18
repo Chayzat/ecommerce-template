@@ -1,7 +1,7 @@
 - var navItems = [{'Home':'index.html'}, {'Shop':'shop.html'}, {'About':'about.html'}, {'Contact': 'contact.html'}]
 
 mixin nav(activePage='Home', classes='nav', items= navItems)
-    nav.nav.flex
+    nav.nav.flex(class= activePage)
         ul.nav-menu.flex
             each item in items
                 li.nav-item

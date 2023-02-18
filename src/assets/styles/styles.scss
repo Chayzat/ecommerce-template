@@ -1,7 +1,11 @@
 @import './colors.scss';
 @import './reset.scss';
 
-body {
+.header {
+    background-color: inherit;
+}
+
+.Home {
     background-color: $yellow;
 }
 
@@ -9,6 +13,7 @@ body {
     position: relative;
     padding: 2.375rem;
     justify-content: center;
+    font-weight: 500;
     .nav-menu {
         gap: 4.688rem;
     }
@@ -16,6 +21,7 @@ body {
         gap: 2.813rem;
         position: absolute;
         right: 6.25rem;
+        cursor: pointer;
     }
     .nav-link:hover {
         color: $yellow-dark;
