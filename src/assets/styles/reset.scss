@@ -65,6 +65,9 @@ ul, li {
 
 .section {
     padding: 4.5rem 0rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex {
@@ -72,10 +75,41 @@ ul, li {
 }
 
 .flex-center {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .active {
     color: $yellow-dark;
+}
+
+.grid {
+    display: grid;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    border-bottom: 2px solid $border;
+    padding: .813rem 0;
+    cursor: pointer;
+    &:hover {
+        color: $yellow-dark;
+        border-color: $yellow-dark;
+        transition: all .4s;
+    }
+}
+
+.title {
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    font-weight: 500;
+}
+.text {
+    color: $grey;
+    line-height: 2.4rem;
+    font-weight: 500;
 }

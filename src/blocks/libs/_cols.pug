@@ -1,0 +1,14 @@
+- var footerItems1 = ['Links', 'Home', 'Shop', 'Contact']
+- var footerItems2 = ['Help', 'Payment', 'Returns', 'Privacy Policies']
+
+mixin col1(items= footerItems1)
+    ul.footer__content-list.flex
+        each item in items
+            li.footer__content-item
+                a.footer__content-link(href='#')= item
+
+mixin col2(items= footerItems2)
+    ul.footer__content-list.flex
+        each item in items
+            li.footer__content-item
+                a.footer__content-link(href='#')= item

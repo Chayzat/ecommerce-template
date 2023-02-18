@@ -1,0 +1,45 @@
+mixin home
+    section.home
+        .home__container.container.grid
+            .home__content.flex
+                h2.home__title
+                    | Rocket single
+                    br
+                    | seater
+                a.btn.home__btn(href='#') Shop Now
+            .home__img
+                img(src='../../../assets/images/single.png' alt='home image')
+    section.home-table.section
+        .home-table__container.container
+            +box1()
+    section.home-top.section
+        .home-top__container.container
+            .home-top__content
+                .home-top__heading
+                    h2.home-top__heading-title.title Top Picks For You
+                    p.home-top__heading-text.text Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
+                +box2()
+                a.btn.home-top__btn View More
+    section.arrival.section
+        .arrival__continer.container
+            .arrival__content.grid
+                .arrival__content-img
+                    img(src='../../../assets/images/big-sofa.png')
+                .arrival__content-text.flex-center
+                    p.arrival__content-text__title New Arrivals
+                    h2.arrival__content-text__name Asgaard sofa
+                    a.arrival__content-text__btn Order Now
+    section.blog.section
+        .blog__container.container
+            .blog__content
+                .blog__content-heading
+                    h2.blog__content-heading__title.title Our Blogs
+                    p.blog__content-heading__text.text Find a bright ideal to suit your taste with our great selection
+                +box3()
+                a.btn.blog__content-btn View All Post
+    section.inst.section
+        .inst__container.container
+            .inst__content
+                h2.inst__content-title Our Instagram
+                p.inst__content-text Follow our store on Instagram
+                a.inst__content-btn Follow Us

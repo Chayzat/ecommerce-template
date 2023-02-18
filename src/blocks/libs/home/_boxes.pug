@@ -1,0 +1,43 @@
+- var boxItems1 = [{'Side Table':'square-table.png'}, {'Side Table':'side-table.png'}]
+- var boxItems2 = [{'Trenton modular sofa_3':'sofa_3.png'}, {'Granite dining table with dining chair':'dinnig.png'}, {'Outdoor bar table and stool': 'bar-table.png'}, {'Plain console with teak mirror': 'mirror.png'}]
+- var boxItems3 = [{'Going all-in with millennial design':'blog-1.png'}, {'Going all-in with millennial design':'blog-2.png'}, {'Going all-in with millennial design': 'blog-3.png'}]
+
+mixin box1(boxes= boxItems1)
+    .home-table__content.flex
+        each box in boxes
+            .home-table__box
+                each imgSrc, title in box
+                    .home-table__box-img
+                        img(src=`../../../assets/images/${imgSrc}` alt='table')
+                    .home-table__box-content
+                        h3.home-table__box-title= title
+                        a.btn.home-table__box-btn(href='#') View More
+
+mixin box2(boxes= boxItems2)
+    .home-top__content.flex
+        each box in boxes
+            .home-top__box
+                each imgSrc, title in box
+                    .home-top__box-img
+                        img(src=`../../../assets/images/${imgSrc}` alt='top')
+                    .home-top__box-content
+                        p.home-top__box-title= title
+                        h3.home-top__box-price Rs. 25,000.00
+
+mixin box3(boxes= boxItems3)
+    .blog__content-list.flex
+        each box in boxes
+            .blog__content-box
+                each imgSrc, title in box
+                    .blog__content-box__img
+                        img(src=`../../../assets/images/${imgSrc}` alt='top')
+                    .blog__content-box__desc
+                        p.blog__content-box__title= title
+                        h3.blog__content-box__btn.btn Read More
+                        .blog__content-box__time.flex-center
+                            .blog__content-box__duration
+                                i.fa-regular.fa-clock
+                                p 5 min
+                            .blog__content-box__date
+                                i.fa-regular.fa-calendar
+                                p 12th Oct 2022

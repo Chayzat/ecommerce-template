@@ -1,0 +1,23 @@
+- var footerItems1 = ['Links', 'Home', 'Shop', 'Contact']
+- var footerItems2 = ['Help', 'Payment', 'Returns', 'Privacy Policies']
+
+mixin footer(items= footerItems1)
+    footer.footer.section
+        .footer__container.container
+            .footer__content.flex
+                p.footer__content-address
+                    | 400 University Drive Suite 200 Coral
+                    br
+                    | Gables,
+                    br
+                    | FL 33134 USA
+                .footer__content-help.flex
+                    +col1()
+                    +col2()
+                    form.footer__form(action="#")
+                        .footer__form-title Newsletters
+                        .footer__form-controlls
+                            input.footer__form-controlls__input(type="email" placeholder="Enter Your Email Address")
+                            button.footer__form-controlls__submit(type="submit")="Subscribe"
+            .footer__copyright
+                p 2022 Meubel House. All rights reverved

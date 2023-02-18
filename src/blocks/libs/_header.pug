@@ -1,7 +1,7 @@
 mixin header(page='Home')
-    header.header.container
+    header.header
         if block
             block
         else
             +navbar
-                +nav(page)
+            +nav(page)
