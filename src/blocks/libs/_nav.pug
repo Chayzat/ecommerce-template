@@ -3,11 +3,16 @@
 mixin nav(activePage='Home', classes='nav', items= navItems)
     .nav__container.container
         nav.nav.flex(class= activePage)
-            ul.nav-menu.flex
+            ul.nav-menu.flex#nav-menu
                 each item in items
                     li.nav-item
                         each href, value in item
                             a.nav-link(
                                 href= href
                                 class=(value === activePage ? "active" : ''))= value
+            .nav__close#nav-close
+                <i class="fa-solid fa-xmark"></i>
+            .nav__toggle#nav-toggle
+                <i class="fa-solid fa-bars"></i>
             +nav-controll()
+

@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   .nav {
-    // position: relative;
     padding: 2.375rem;
     justify-content: center;
     font-weight: 500;
@@ -24,8 +23,30 @@
       color: $yellow-dark;
       transition: all 0.4s;
     }
+    &__toggle {
+      display: none;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all .4s;
+      &:hover {
+        color: $yellow-dark;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: -100%;
+      left: 20px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all .4s;
+      &:hover {
+        color: $yellow-dark;
+      }
+    }
   }
 }
+
+
 
 .home {
   background-color: $yellow;
@@ -246,3 +267,5 @@
     padding-top: 2.5rem;
   }
 }
+
+@import './responsive.scss'
