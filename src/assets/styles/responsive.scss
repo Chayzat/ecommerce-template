@@ -2,27 +2,92 @@
     .header {
         justify-content: flex-start;
     }
+    .home {
+        &__container {
+            grid-template-columns: repeat(1, auto);
+        }
+        &__content {
+            padding-left: 0;
+            align-items: center;
+            text-align: center;
+        }
+        &-table__content {
+            flex-direction: column;
+            text-align: center;
+        }
+        &-table__box {
+            padding-left: 0;
+        }
+    }
+    .home-top {
+        &__content-bx {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__box-title {
+            width: 100%;
+        }
+    }
+    .arrival {
+        &__content {
+            grid-template-columns: repeat(1, auto);
+            gap: 0;
+        }
+    }
+    .footer {
+        &__content {
+            flex-direction: column-reverse;
+            &-help {
+                flex-direction: column-reverse;
+                gap: 3rem;
+            }
+            &-list {
+                gap: 1.625rem;
+            }
+        }
+        &__form-title {
+            padding-bottom: 1rem;
+        }
+        &__form-controlls {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &__submit {
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 
 @media screen and (max-width: 768px) {
-
+    .btn {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        padding: 0.5rem 0;
+    }
+    .text {
+        line-height: 1.45rem;
+        padding-top: 1rem;
+    }
     .header {
         justify-content: flex-start;
         .nav {
             padding: 2.35rem 0;
             &-menu {
-                position: fixed;
+                position: absolute;
                 top: -100%;
                 left: 0;
                 display: flex;
                 flex-direction: column;
                 width: 55%;
-                background-color: $yellow;
+                background-color: $beige-light;
                 padding-block: 5.25rem;
                 align-items: center;
                 justify-content: center;
                 gap: 2.25rem;
+            }
+            &-controll {
+                right: 3rem;
             }
             .show-menu {
                 top: 0%;
@@ -35,7 +100,25 @@
             }
         }
     }
+    .blog__content-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 480px) {
+    .home-table__box-img img {
+        width: 305px;
+        height: 305px;
+    }
+    .home-top {
+        &__content-bx {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .blog__content-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .inst__content-title {
+        padding-bottom: 1rem;
+    }
 }

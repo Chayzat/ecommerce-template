@@ -62,14 +62,14 @@
   }
   &__title {
     font-weight: 500;
-    font-size: 4rem;
-    line-height: 6rem;
+    font-size: clamp(2rem, 1.429rem + 2.86vw, 4rem);
+    line-height: clamp(4rem, 3.429rem + 2.86vw, 6rem);
   }
 }
 .home-table {
   background-color: $beige-pink;
   &__box-title {
-    font-size: 2.25rem;
+    font-size: clamp(1.55rem, 1.35rem + 1vw, 2.25rem);
     font-weight: 500;
     line-height: 3.375rem;
   }
@@ -87,8 +87,11 @@
 
 .home-top {
     &__content {
-        gap: 2.875rem;
         text-align: center;
+        &-bx {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
     }
   &__heading {
     padding-bottom: 4rem;
@@ -100,8 +103,8 @@
   }
   &__box-price {
     font-weight: 500;
-    line-height: 2.25rem;
-    font-size: 2rem;
+    line-height: clamp(1.55rem, 1.35rem + 1vw, 2.25rem);
+    font-size: clamp(1.55rem, 1.421rem + 0.64vw, 2rem);
     padding-top: 0.75rem;
   }
   &__btn {
@@ -116,23 +119,24 @@
     background-color: $beige-light;
     &__content {
         grid-template-columns: repeat(2, auto);
-        gap: 5rem;
+        gap: clamp(3rem, 2.429rem + 2.86vw, 5rem);
     }
     .arrival__content-text {
         flex-direction: column;
+        margin-bottom: 3rem;
         &__title {
-            font-size: 2rem;
+            font-size: clamp(1rem, 0.714rem + 1.43vw, 2rem);
             font-weight: 500;
-            line-height: 2.25rem;
+            line-height: clamp(1rem, 0.643rem + 1.79vw, 2.25rem);
         }
         &__name {
-            font-size: 3rem;
+            font-size: clamp(2rem, 1.714rem + 1.43vw, 3rem);
             font-weight: 700;
-            line-height: 4.5rem;
+            line-height: clamp(3rem, 2.571rem + 2.14vw, 4.5rem);
         }
         &__btn {
             display: inline-block;
-            margin-top: 2.063rem;
+            margin-top: clamp(1.5rem, 1.339rem + 0.8vw, 2.063rem);
             border: 1px solid #000;
             padding: 1.063rem 4.688rem;
             cursor: pointer;
@@ -151,6 +155,7 @@
             margin-bottom: 4.063rem;
         }
         &-list {
+          grid-template-columns: repeat(3, 1fr);
             gap: 1.875rem;
         }
         &-box__title {
@@ -162,7 +167,7 @@
         &-box__time {
             font-weight: 300;
             line-height: 1.5rem;
-            gap: 1.25rem;
+            gap: clamp(0.5rem, 0.286rem + 1.07vw, 1.25rem);
             margin-top: 1.25rem;
             p {
                 display: inline;
@@ -182,9 +187,9 @@
     background-image: url('../images/inst.png');
     &__content {
         &-title {
-            font-size: 3.75rem;
+            font-size: clamp(2.5rem, 2.143rem + 1.79vw, 3.75rem);
             font-weight: 700;
-            line-height: 5.625rem;
+            line-height: clamp(2.45rem, 1.543rem + 4.54vw, 5.625rem);
         }
         &-text, &-btn {
             font-size: 1.25rem;
@@ -208,9 +213,13 @@
 
 .footer {
   &__content {
-    gap: 8.875rem;
+    gap: clamp(3.5rem, -9.731rem + 20.67vw, 8.875rem);
     padding-bottom: 3.25rem;
     align-items: center;
+    &-help__cols {
+      display: flex;
+      gap: clamp(4rem, 2.589rem + 7.05vw, 8.938rem);
+    }
     &-address {
       color: $grey;
       line-height: 1.5rem;
@@ -228,9 +237,6 @@
           color: $yellow-dark;
           text-decoration: underline;
         }
-      }
-      &:nth-child(2) a{
-        padding: 0 4.563rem 0 9.125rem;
       }
     }
   }

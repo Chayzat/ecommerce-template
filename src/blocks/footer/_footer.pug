@@ -12,8 +12,9 @@ mixin footer(items= footerItems1)
                     br
                     | FL 33134 USA
                 .footer__content-help.flex
-                    +col1()
-                    +col2()
+                    .footer__content-help__cols
+                        +col1()
+                        +col2()
                     form.footer__form(action="#")
                         .footer__form-title Newsletters
                         .footer__form-controlls

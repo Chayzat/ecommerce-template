@@ -14,7 +14,7 @@ mixin box1(boxes= boxItems1)
                         a.btn.home-table__box-btn(href='#') View More
 
 mixin box2(boxes= boxItems2)
-    .home-top__content.flex
+    .home-top__content-bx
         each box in boxes
             .home-top__box
                 each imgSrc, title in box
@@ -25,7 +25,7 @@ mixin box2(boxes= boxItems2)
                         h3.home-top__box-price Rs. 25,000.00
 
 mixin box3(boxes= boxItems3)
-    .blog__content-list.flex
+    .blog__content-list.grid
         each box in boxes
             .blog__content-box
                 each imgSrc, title in box
