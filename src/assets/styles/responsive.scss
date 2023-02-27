@@ -56,6 +56,10 @@
             }
         }
     }
+    .filter__content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -103,6 +107,20 @@
     .blog__content-list {
         grid-template-columns: repeat(2, 1fr);
     }
+    .filter__content {
+        padding: 25px;
+        &-filter {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        &-results {
+            border-left: none;
+            padding: 0;
+        }
+        &-sort {
+            gap: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -120,5 +138,17 @@
     }
     .inst__content-title {
         padding-bottom: 1rem;
+    }
+    .filter__content{
+        &-filter {
+            gap: 1rem;
+        }
+    }
+    .sort__box-input {
+        padding: 12px;
+        margin-left: 5px;
+    }
+    .sort__box p {
+        display: none;
     }
 }

@@ -1,0 +1,16 @@
+- var boxItems = ['icon-3.svg', 'icon-2.svg', 'icon-1.svg']
+
+mixin filter-box(items= boxItems)
+    ul.filter__box-list
+        each item in items
+            li.filter__box-item
+                a.filter__box-link(href="#")
+                    img(src=`../../../assets/images/${item}` alt="icon")
+
+mixin sort-box
+    .sort__box.flex-center
+        p.sort__box-lbl Show
+        input.sort__box-input.inp-num(type="number" name="show" placeholder='16')
+    .sort__box.flex-center
+        p.sort__box-lbl Short by
+        input.sort__box-input(type="text" name="sort" placeholder='Default')

@@ -1,0 +1,11 @@
+mixin page-main(page='Shop')
+    .mainh-page.flex-center
+        .mainh-page__content.flex-center
+            .mainh-page__logo
+                a.mainh-page__logo-link(href="#")
+                    img(src="../../assets/images/logo.svg", alt="logo")
+            .mainh-page__title
+                h2= page
+            p.mainh-page__desc= 'Home > '
+                span= `${page}`
+

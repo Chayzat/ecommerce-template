@@ -274,4 +274,73 @@
   }
 }
 
+.mainh-page {
+  &__content {
+    flex-direction: column;
+  }
+  &__title h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+  }
+  &__desc {
+    line-height: 2.5rem;
+    font-weight: 500;
+    span {
+      font-weight: 300;
+    }
+  }
+}
+.p-0 {
+  padding-top: 0;
+  background-image: url('../images/shop-home.png');
+  height: 316px;
+}
+
+.filters {
+  background-color: $beige-pink;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.filter__content {
+  gap: clamp(2rem, -25.857rem + 34.29vw, 5rem);
+  justify-content: space-between;
+  padding: 35px clamp(4.688rem, 4.277rem + 2.05vw, 6.125rem);
+  .filter__content-filter {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    .filter__box-list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  &-sort {
+    gap: 30px;
+  }
+  &-results {
+    border-left: 2px solid $grey;
+    padding-left: 2rem;
+  }
+  p {
+    line-height: 1;
+  }
+}
+
+.sort__box-input {
+  background-color: $white;
+  padding: 12px 18px;
+  margin-left: 17px;
+  color: $black;
+}
+.inp-num {
+  width: 75px;
+}
+
+
+
+
+
+
 @import './responsive.scss'
