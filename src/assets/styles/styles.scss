@@ -390,6 +390,79 @@
   }
 }
 
+.git__content {
+  &-head {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-head__title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3.375rem;
+  }
+  &-head__text {
+    color: $grey;
+    line-height: 1.5rem;
+    width: clamp(18.75rem, -31.13rem + 103.92vw, 40.313rem);
+  }
+  &-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    &__title {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    &__desc {
+      width: 212px;
+      line-height: 1.5rem;
+    }
+    &__icon {
+      padding-top: 1rem;
+    }
+  }
+  &-body {
+    display: grid;
+    gap: clamp(5.313rem, -0.754rem + 8.82vw, 7.188rem);
+    grid-template-columns: auto 635px;
+    padding-top: clamp(5.313rem, -5.809rem + 16.18vw, 8.75rem);
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    label {
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+    }
+    &__controll {
+      color: $grey;
+      line-height: 1.5rem;
+      padding: 25px 0 32px 25px;
+      border: 1px solid $grey;
+      border-radius: 10px;
+      margin-top: 22px;
+      resize: none;
+    }
+    button {
+      border: 1px solid #000;
+    color: black;
+    padding: 12px 89px;
+    border-radius: 15px;
+    width: 237px;
+    cursor: pointer;
+    transition: all .4s;
+    &:hover {
+      background-color: $black;
+      color: $white
+    }
+    }
+  }
+}
 
 
 
