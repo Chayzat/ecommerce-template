@@ -1,0 +1,9 @@
+- var guaranteeItems = [{'Free Delivery':'For all oders over $50, consectetur adipim scing elit.'}, {'90 Days Return':'If goods have problems, consectetur adipim scing elit.'}, {'Secure Payment':'100% secure payment, consectetur adipim scing elit.'}]
+
+mixin guarantee(items= guaranteeItems)
+    ul.guarantee__list
+        each item in items
+            li.guarantee__item
+                each desc, title in item
+                    h3.guarantee__title= title
+                    p.guarantee__desc= desc

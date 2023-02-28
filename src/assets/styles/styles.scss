@@ -337,6 +337,59 @@
 .inp-num {
   width: 75px;
 }
+.products__content-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  &__price {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+  }
+}
+.products__btns {
+  &-list {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7.3rem;
+    gap: 38px;
+  }
+  &-item {
+    padding: 15px 24px;
+    border-radius: 10px;
+    background-color: $beige-light;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    transition: all .4s;
+    cursor: pointer;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+
+.guarantee {
+  background-color: $beige-pink;
+  padding: 96px 100px;
+  &__list {
+    display: flex;
+    gap: 3rem;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  &__desc {
+    color: $grey;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+
 
 
 

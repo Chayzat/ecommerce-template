@@ -1,1 +1,21 @@
-mixin product-cart
+- var cartItems = [{'Trenton modular sofa_3':'1'}, {'Granite dining table with dining chair':'2'}, {'Outdoor bar table and stool':'3'}, {'Plain console with teak mirror':'4'},{'Grain coffee table':'5'}, {'Kent coffee table':'6'}, {'Round coffee table_color 2':'7'}, {'Reclaimed teak coffee table':'8'},{'Plain console_':'9'}, {'Reclaimed teak Sideboard':'10'}, {'SJP_0825':'11'}, {'Bella chair and table':'12'}, {'Granite square side table':'13'},{'Asgaard sofa':'14'}, {'Maya sofa three seater':'15'}, {'Outdoor sofa set':'16'}]
+- var linkItems = ['1', '2', '3', 'Next']
+
+
+mixin product-cart(items= cartItems)
+    ul.products__content-list
+        each item in items
+            li.products__content-list__item
+                each img, title in item
+                    .products__content-list__img
+                        img(src=`../../../assets/images/shop-${img}.png`, alt="shop")
+                    .products__content-list__text
+                        p= title
+                        p.products__content-list__price Rs. 25.000
+
+
+mixin pagBtns(items= linkItems)
+    ul.products__btns-list
+        each item in items
+            li.products__btns-item
+                a.products__btns-link(href="#")= item

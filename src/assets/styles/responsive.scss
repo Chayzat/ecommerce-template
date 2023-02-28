@@ -60,6 +60,12 @@
         flex-direction: column;
         align-items: center;
     }
+    .products__content-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .guarantee {
+        padding: 85px 65px;
+    }
 }
 
 
@@ -108,7 +114,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .filter__content {
-        padding: 25px;
+        padding: 25px 0;
         &-filter {
             flex-direction: column;
             gap: 0.5rem;
@@ -119,6 +125,20 @@
         }
         &-sort {
             gap: 10px;
+        }
+    }
+    .products__content-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .guarantee {
+        &__list {
+
+            gap: 2rem;
+            flex-direction: column;
+        }
+        &__tilte {
+            font-size: 1.5rem;
+            line-height: 2.3rem;
         }
     }
 }
@@ -150,5 +170,21 @@
     }
     .sort__box p {
         display: none;
+    }
+    .products__content-list {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .products__btns-list {
+        gap: 25px;
+    }
+    .products__btns-item {
+        padding: 15px;
+    }
+    .guarantee {
+        padding: 55px 0;
+    }
+    .df {
+        width: 130px;
     }
 }
